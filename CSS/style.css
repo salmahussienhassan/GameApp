@@ -1,0 +1,122 @@
+:root{
+--main_color:#272b30;
+--secondary_color:rgb(58, 73, 123);
+--blue:#0d6efd;
+}
+
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--seconde-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.5) inset;
+}
+
+body{
+  font-family: "Comfortaa", cursive;
+  background-color: var(--main_color);
+}
+h1 ,h2 ,h3 ,h4, h5,h6{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/* game-section */
+
+/* start-header */
+header{
+  max-height: 30vh;
+ 
+}
+/* end-header */
+
+/* start-navbar */
+nav{
+  margin-top: -30px !important;
+  background-color: var(--secondary_color);
+  z-index: 4;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.75)!important;
+}
+.active{
+  color: var(--blue) !important;
+}
+.nav-link{
+  font-family: 'Nanum Gothic', sans-serif;
+  
+text-transform: uppercase;
+}
+/* end-navbar */
+
+/* start-game-container  */
+#game_container{
+  margin-top: -30px !important;
+  backdrop-filter: blur(4px);
+ 
+  background-color: var(--main_color);
+}
+#card{
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.2)!important;
+  border: 1px solid #1b1e20;
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+
+}
+
+.head button{
+  height: 40px;
+  background-color: var(--blue);
+  color: white;
+ font-size: 14px;
+}
+#card p{
+  color: #667485;
+}
+.equal-height-row {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+
+.col-md-3:hover{
+  cursor: pointer;
+  
+}
+.col-md-3:hover #card{
+  filter: grayscale(0);
+  transform: scale(1.07);
+  
+}
+footer{
+ 
+  border-top: 1px solid #1b1e20;
+}
+footer span{
+  background-color: #32383e;
+ padding: 0px 5px;
+ border-radius: 20%;
+ font-family: 'Nanum Gothic', sans-serif;
+}
+/* end-game-container  */
+
+/* start-detailes */
+#detailes{
+  background-color: #272729be;
+  backdrop-filter: blur(4px);
+  min-height: 100vh;
+}
+#detailes p{
+  font-size: 14px;
+
+}
+#detailes button{
+   font-family: "Nerko One", cursive;
+   font-size: large;
+}
+/* end-detailes */
