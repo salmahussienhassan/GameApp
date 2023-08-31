@@ -1,3 +1,6 @@
+import { gameSection,detaileSection,getDetailes } from "./index.js";
+import Detailes from "./detailes.js";
+
 export default class Game{
 
     constructor(category){
@@ -18,5 +21,28 @@ this.category=category
        return result
     }
 
+displayDetailes(arr){
+    
+    for(let i=0;i<arr.length;i++){
+        arr[i].addEventListener('click',async function(){
+            let detailes=new Detailes(this.id)
+            $('.loading').css('display','flex')
+           let resultDetailes= await detailes.gameDetailes()
+           $('.loading').css('display','none')
+           $(this.body).css('overflow-y','auto')
+           getDetailes(resultDetailes)
+          
+            console.log(this.id)
+            gameSection.classList.replace('d-block','d-none')
+          
+
+            detaileSection.classList.replace('d-none','d-flex')
+           
+        })
+        
+    }
+    
+
+}
 
 }
